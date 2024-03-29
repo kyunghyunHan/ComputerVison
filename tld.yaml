@@ -1,6 +1,0 @@
-names:
-  0: dog
-  1: cat
-path: ./yolo_data/
-train: train/images
-val: valid/images
