@@ -93,3 +93,6 @@ images, labels = next(dataiter)
 imshow(torchvision.utils.make_grid(images))
 # 라벨 프린트
 print(' '.join(f'{classes[labels[j]]:5s}' for j in range(batch_size)))
+
+
+
