@@ -38,9 +38,11 @@ from ultralytics import YOLO
 
 # YOLO 모델 불러오기
 model = YOLO(model='./weights/best.pt')
+scripted_model = torch.jit.script(model)
+scripted_model.save("yolo_model.pt")
 
-# 예제 입력 데이터 생성
-dummy_input = torch.rand(1, 3, 640, 640)  # 예제 입력 데이터 shape에 맞게 수정
+# # 예제 입력 데이터 생성
+# dummy_input = torch.rand(1, 256, 46, 80)  # 예제 입력 데이터 shape에 맞게 수정
 
-# ONNX 형식으로 모델 변환
-torch.onnx.export(model, dummy_input, 'yolov5s.onnx', opset_version=11)
+# # ONNX 형식으로 모델 변환
+# torch.onnx.export(model, dummy_input, "alexnet.onnx", verbose=True, input_names=input_names, output_names=output_names)
