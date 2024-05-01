@@ -52,7 +52,7 @@ np.random.seed(724)
 model = YOLO('./yolov8n.pt')
 
 # Train the model using the 'indoor.yaml' dataset for 10 epochs
-model.train(data='./tld.yaml' , epochs=20)
+# model.train(data='./tld.yaml' , epochs=20)
 
 # Evaluate the model's performance on the validation set
 results = model.val()
