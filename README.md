@@ -12,3 +12,7 @@ val: valid/images
 
 ```
 
+## venv
+``
+source ../../../../opencvpy/bin/activate   
+``
